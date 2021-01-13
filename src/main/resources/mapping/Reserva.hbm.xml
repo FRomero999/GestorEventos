@@ -1,0 +1,15 @@
+<hibernate-mapping>
+    <class name="models.Reserva" table="reserva">
+        <id column="id" name="id" type="integer">
+            <generator class="identity"/>
+        </id>
+        <property name="nombre" type="string"/>
+        <property name="apellido1" type="string"/>
+        <property name="apellido2" type="string"/>
+        <property name="correo" type="string"/>
+        <property name="evento" type="string"/>
+        <property name="observaciones" type="string"/>
+        <property name="asistentes" type="integer"/>
+        <property name="fecha" type="date"/>
+    </class>
+</hibernate-mapping>
