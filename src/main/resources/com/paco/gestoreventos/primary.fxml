@@ -37,8 +37,8 @@
               </rowConstraints>
                <children>
                   <Label text="Nombre" />
-                  <Label text="Apellido1" GridPane.rowIndex="1" />
-                  <Label text="Apellido2" GridPane.rowIndex="2" />
+                  <Label text="Primer apellido" GridPane.rowIndex="1" />
+                  <Label text="Segundo apellido" GridPane.rowIndex="2" />
                   <ChoiceBox fx:id="evento" prefHeight="26.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <DatePicker fx:id="fecha" prefHeight="26.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Label text="Fecha" GridPane.rowIndex="3" />
