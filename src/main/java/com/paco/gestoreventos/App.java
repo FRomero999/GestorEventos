@@ -13,7 +13,7 @@ import org.hibernate.Transaction;
 
 
 /**
- * JavaFX App
+ * JavaFX App v1
  */
 public class App extends Application {
 
