@@ -2,9 +2,12 @@ package com.paco.gestoreventos;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +22,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import net.sf.jasperreports.engine.JRException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -80,6 +84,18 @@ public class SecondaryController implements Initializable {
 
     @FXML
     private void generarInforme(ActionEvent event) {
+        
+        try {
+            Report r = new Report();
+            r.showReport();
+        } catch (JRException ex) {
+            Logger.getLogger(SecondaryController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(SecondaryController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(SecondaryController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     @FXML
@@ -137,6 +153,14 @@ public class SecondaryController implements Initializable {
             }                
         }
 
+    }
+
+    @FXML
+    private void actualizarTabla(MouseEvent event) {
+    }
+
+    @FXML
+    private void mostrarAyuda(ActionEvent event) {
     }
     
 }
